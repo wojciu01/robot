@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180422 14:58:14.188" generator="Robot 3.0 (Python 2.7.5 on linux2)">
+<suite source="/home/tester/robot/sel.robot" id="s1" name="Sel">
+<test id="s1-t1" name="Go to poczta.wp.pl">
+<kw type="setup" name="Open Browser To Login Page">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${WWW}</arg>
+</arguments>
+<msg timestamp="20180422 14:58:14.256" level="INFO">Opening browser 'firefox' to base url 'http://www.poczta.wp.pl/'</msg>
+<status status="PASS" endtime="20180422 14:58:18.059" starttime="20180422 14:58:14.256"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180422 14:58:18.174" starttime="20180422 14:58:18.059"></status>
+</kw>
+<status status="PASS" endtime="20180422 14:58:18.174" starttime="20180422 14:58:14.256"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="login"]</arg>
+<arg>${USER}</arg>
+</arguments>
+<msg timestamp="20180422 14:58:18.176" level="INFO">Typing text 'testerwsb_t1' into text field '//*[@id="login"]'</msg>
+<status status="PASS" endtime="20180422 14:58:18.306" starttime="20180422 14:58:18.175"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="password"]</arg>
+<arg>${PASS}</arg>
+</arguments>
+<msg timestamp="20180422 14:58:18.306" level="INFO">Typing password into text field '//*[@id="password"]'</msg>
+<status status="PASS" endtime="20180422 14:58:18.379" starttime="20180422 14:58:18.306"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="btnSubmit"]</arg>
+</arguments>
+<msg timestamp="20180422 14:58:18.379" level="INFO">Clicking button '//*[@id="btnSubmit"]'.</msg>
+<status status="PASS" endtime="20180422 14:58:22.328" starttime="20180422 14:58:18.379"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@title="Odebrane"]</arg>
+</arguments>
+<assign>
+<var>${Odebrane}</var>
+</assign>
+<msg timestamp="20180422 14:58:22.464" level="INFO">${Odebrane} = Odebrane</msg>
+<status status="PASS" endtime="20180422 14:58:22.465" starttime="20180422 14:58:22.328"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${Odebrane}</arg>
+<arg>zawiera slowo</arg>
+</arguments>
+<msg timestamp="20180422 14:58:22.542" level="INFO">Current page contains text 'Odebrane'.</msg>
+<status status="PASS" endtime="20180422 14:58:22.542" starttime="20180422 14:58:22.465"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180422 14:58:22.576" starttime="20180422 14:58:22.543"></status>
+</kw>
+<status status="PASS" endtime="20180422 14:58:22.576" critical="yes" starttime="20180422 14:58:14.255"></status>
+</test>
+<test id="s1-t2" name="Wrong pass">
+<kw type="setup" name="Open Browser To Login Page">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${WWW}</arg>
+</arguments>
+<msg timestamp="20180422 14:58:22.595" level="INFO">Opening browser 'firefox' to base url 'http://www.poczta.wp.pl/'</msg>
+<status status="PASS" endtime="20180422 14:58:26.415" starttime="20180422 14:58:22.595"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180422 14:58:26.537" starttime="20180422 14:58:26.415"></status>
+</kw>
+<status status="PASS" endtime="20180422 14:58:26.537" starttime="20180422 14:58:22.594"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="login"]</arg>
+<arg>${USER}</arg>
+</arguments>
+<msg timestamp="20180422 14:58:26.538" level="INFO">Typing text 'testerwsb_t1' into text field '//*[@id="login"]'</msg>
+<status status="PASS" endtime="20180422 14:58:26.648" starttime="20180422 14:58:26.537"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="password"]</arg>
+<arg>${PASS1}</arg>
+</arguments>
+<msg timestamp="20180422 14:58:26.649" level="INFO">Typing password into text field '//*[@id="password"]'</msg>
+<status status="PASS" endtime="20180422 14:58:26.726" starttime="20180422 14:58:26.649"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="btnSubmit"]</arg>
+</arguments>
+<msg timestamp="20180422 14:58:26.726" level="INFO">Clicking button '//*[@id="btnSubmit"]'.</msg>
+<status status="PASS" endtime="20180422 14:58:27.856" starttime="20180422 14:58:26.726"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180422 14:58:27.939" starttime="20180422 14:58:27.856"></status>
+</kw>
+<status status="PASS" endtime="20180422 14:58:27.939" critical="yes" starttime="20180422 14:58:22.577"></status>
+</test>
+<status status="PASS" endtime="20180422 14:58:27.953" starttime="20180422 14:58:14.188"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Sel" pass="2">Sel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
